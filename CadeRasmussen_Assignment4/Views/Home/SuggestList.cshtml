@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "User Suggestions";
+    ViewBag.Header = "User Suggested List";
+}
+
+@model IEnumerable<CadeRasmussen_Assignment4.Models.UserSuggestion>
+
+<div>
+    <table>
+        <thead>
+            @*Creating a table to the page so that the inforation will be dispalyed in a table*@
+            <tr class="table-bordered">
+                <th>Resturant Name</th>
+                <th>Resturant Phone</th>
+                <th>Favorite Dish</th>
+                <th>User</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (CadeRasmussen_Assignment4.Models.UserSuggestion s in Model)
+            {
+                <tr>
+                    <td>@s.ResturantName</td>
+                    <td>@s.RestPhone</td>
+                    <td>@s.FavoriteDish</td>
+                    <td>@s.UserName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

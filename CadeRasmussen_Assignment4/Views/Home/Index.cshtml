@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home";
+    ViewBag.Header = "Top 5 Resturants in Provo";
+}
+
+@model IEnumerable<string>
+
+<div class="text-center">
+    <h1 class="display-4">@ViewBag.Header</h1>
+    @*Adding bootstrap css to the picture on the page*@
+    <img class="rounded-circle" src="~/img/resturant.jfif" />
+    <br />
+    <br />
+
+    @*Dispalying the infromation from the top 5 resturants in the area.*@
+    <ul class="list-group">
+        @foreach (string r in Model)
+        {
+            @*Allowing for the white space to be displayed inside the html page.*@
+            <li class="list-group-item justify-content-center">@Html.Raw(r)</li>
+        }
+    </ul>
+</div>

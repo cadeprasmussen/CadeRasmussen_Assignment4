@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Submit";
+    ViewBag.Header = "Submit Your Suggestion";
+}
+
+@model CadeRasmussen_Assignment4.Models.UserSuggestion
+
+
+<form class="form-group" SubmitSuggestion" method="post">
+    <div style="right">
+        <label asp-for="UserName">Name: </label>
+        <input asp-for="UserName"/>
+    </div>
+    <div>
+        <label asp-for="ResturantName">Resturant Name: </label>
+        <input asp-for="ResturantName"/>
+    </div>
+    <div>
+        <label asp-for="FavoriteDish">Favorite Dish: </label>
+        <input asp-for="FavoriteDish"/>
+    </div>
+    <div>
+        <label asp-for="RestPhone">Resturant Phone: </label>
+        <input asp-for="RestPhone"/>
+    </div>
+    <button class="btn-primary" type="submit">Submit Suggestion</button>
+    <div asp-validation-summary="All"></div>
+</form>

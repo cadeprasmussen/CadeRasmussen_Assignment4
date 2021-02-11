@@ -1,0 +1,46 @@
+﻿/*Simply adding the style for the movie list page*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.submit {
+    border-radius: 40px;
+    color: white;
+    background-color: black;
+    border-color: black;
+    font-size: 30px;
+}
+
+    .submit:hover {
+        background-color: grey;
+    }
+
+    .submit:active {
+        transform: translateY(4px);
+    }
+
+form {
+    width: auto;
+}
+
+input[type='submit'] {
+    margin: 0 auto;
+}
+
+label {
+    font-size: 20px;
+    width: 125px;
+    display: inline-block;
+}
